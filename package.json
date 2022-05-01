@@ -9,19 +9,24 @@
 		"email": "vdemedes@gmail.com",
 		"url": "https://github.com/vadimdemedes"
 	},
-	"main": "build",
-	"types": "build/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"require": "./dist/index.js",
+		"import": "./dist/index.mjs",
+		"types": "./dist/index.d.ts"
+	},
 	"engines": {
 		"node": ">=10"
 	},
 	"scripts": {
-		"build": "tsc",
-		"prepare": "npm run build",
+		"build": "pkgroll",
 		"test": "tsc --noEmit && xo && FORCE_COLOR=true ava"
 	},
-	"files": [
-		"build"
-	],
 	"keywords": [
 		"react",
 		"cli",
@@ -89,13 +94,14 @@
 		"ms": "^2.1.1",
 		"node-pty": "^0.10.0",
 		"p-queue": "^6.2.1",
+		"pkgroll": "^1.1.3",
 		"prettier": "^2.0.4",
 		"react": "^17.0.2",
 		"react-devtools-core": "^4.19.1",
 		"sinon": "^8.1.1",
 		"strip-ansi": "^6.0.0",
 		"ts-node": "7.0.0",
-		"typescript": "^3.8.3",
+		"typescript": "^4.6.4",
 		"xo": "^0.28.0"
 	},
 	"peerDependencies": {

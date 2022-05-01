@@ -29,6 +29,7 @@ if (process.env.DEV === 'true') {
 		// eslint-disable-next-line import/no-unassigned-import
 		require('./devtools');
 	} catch (error) {
+		// @ts-expect-error eslint complains if asserting to any
 		if (error.code === 'MODULE_NOT_FOUND') {
 			console.warn(
 				`
