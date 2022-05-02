@@ -5,7 +5,7 @@ import indentString from 'indent-string';
 import delay from 'delay';
 import {renderToString} from './helpers/render-to-string';
 import createStdout from './helpers/create-stdout';
-import {render, Box, Text} from '../src';
+import {render, Box, Text} from '../dist';
 
 const box = (text: string, options?: Options): string => {
 	return boxen(text, {

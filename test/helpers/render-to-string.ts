@@ -1,4 +1,4 @@
-import {render} from '../../src';
+import {render} from '../../dist';
 import createStdout from './create-stdout';
 
 export const renderToString: (

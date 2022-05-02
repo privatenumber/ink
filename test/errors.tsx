@@ -3,7 +3,7 @@ import React from 'react';
 import test from 'ava';
 import patchConsole from 'patch-console';
 import stripAnsi from 'strip-ansi';
-import {render} from '../src';
+import {render} from '../dist';
 import createStdout from './helpers/create-stdout';
 
 let restore;

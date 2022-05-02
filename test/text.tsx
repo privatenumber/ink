@@ -2,7 +2,7 @@ import React from 'react';
 import test from 'ava';
 import chalk from 'chalk';
 import {renderToString} from './helpers/render-to-string';
-import {render, Box, Text} from '../src';
+import {render, Box, Text} from '../dist';
 import createStdout from './helpers/create-stdout';
 
 test('<Text> with undefined children', t => {

@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import test from 'ava';
 import chalk from 'chalk';
-import {Box, Text, render} from '../src';
+import {Box, Text, render} from '../dist';
 import createStdout from './helpers/create-stdout';
 
 test('update child', t => {

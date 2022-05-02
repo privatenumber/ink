@@ -6,7 +6,7 @@ import ansiEscapes from 'ansi-escapes';
 import stripAnsi from 'strip-ansi';
 import boxen from 'boxen';
 import delay from 'delay';
-import {render, Box, Text} from '../src';
+import {render, Box, Text} from '../dist';
 import createStdout from './helpers/create-stdout';
 
 const term = (fixture: string, args: string[] = []) => {

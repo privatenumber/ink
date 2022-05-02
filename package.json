@@ -24,8 +24,9 @@
 		"node": ">=10"
 	},
 	"scripts": {
-		"build": "pkgroll",
-		"test": "tsc --noEmit && xo && FORCE_COLOR=true ava"
+		"build": "pkgroll --export-condition=node --target=node12.19",
+		"pretest": "npm run build",
+		"test": "FORCE_COLOR=true ava"
 	},
 	"keywords": [
 		"react",
