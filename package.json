@@ -24,7 +24,7 @@
 		"node": ">=10"
 	},
 	"scripts": {
-		"build": "pkgroll --export-condition=node --target=node12.19",
+		"build": "pkgroll --export-condition=node --target=node12.19 --minify",
 		"pretest": "npm run build",
 		"test": "FORCE_COLOR=true ava"
 	},
