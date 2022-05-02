@@ -12,7 +12,7 @@ export const run: Run = (fixture, props) => {
 	};
 
 	return new Promise<string>((resolve, reject) => {
-		const term = spawn('ts-node', [`${__dirname}/../fixtures/${fixture}.tsx`], {
+		const term = spawn('node', ['-r', 'esbuild-register', `${__dirname}/../fixtures/${fixture}.tsx`], {
 			name: 'xterm-color',
 			cols: typeof props?.columns === 'number' ? props.columns : 100,
 			cwd: __dirname,

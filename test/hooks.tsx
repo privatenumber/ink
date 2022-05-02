@@ -15,7 +15,7 @@ const term = (fixture: string, args: string[] = []) => {
 	const env = {...process.env};
 	delete env.CI;
 
-	const ps = spawn('ts-node', [`./fixtures/${fixture}.tsx`, ...args], {
+	const ps = spawn('node', ['-r', 'esbuild-register', `./fixtures/${fixture}.tsx`, ...args], {
 		name: 'xterm-color',
 		cols: 100,
 		cwd: __dirname,
